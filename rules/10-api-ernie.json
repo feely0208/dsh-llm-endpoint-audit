@@ -1,0 +1,25 @@
+{
+  "id": "LLM-API-ERNIE",
+  "title": "调用了百度文心大模型 API（盘点）",
+  "severity": "info",
+  "source": "《个人信息保护法》第 17/23 条 —— 向第三方大模型服务传输个人信息须逐一告知",
+  "advice": "盘点项：确认隐私政策已披露百度（文心一言）这一服务商与传输的数据类型；密钥走环境变量。",
+  "check": {
+    "type": "file-pattern",
+    "pattern": "aip\\.baidubce\\.com|ernie|文心一言",
+    "flags": "gi",
+    "exts": [
+      ".js",
+      ".mjs",
+      ".ts",
+      ".py",
+      ".json",
+      ".yaml",
+      ".yml",
+      ".md",
+      ".txt",
+      ".env"
+    ],
+    "max": 10
+  }
+}

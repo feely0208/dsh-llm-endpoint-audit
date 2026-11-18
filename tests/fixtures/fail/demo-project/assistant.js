@@ -1,0 +1,3 @@
+const ds = await fetch('https://api.deepseek.com/chat/completions', { method: 'POST', headers: { Authorization: 'Bearer ' + process.env.DEEPSEEK_API_KEY }, body: JSON.stringify({ model: 'deepseek-flash', messages }) });
+const oa = await fetch('https://api.openai.com/v1/chat/completions', { method: 'POST', headers: { Authorization: 'Bearer ' + process.env.OPENAI_API_KEY }, body: JSON.stringify({ model: 'gpt-4o-mini', messages }) });
+const qw = await fetch('https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions', { method: 'POST', headers: { Authorization: 'Bearer ' + process.env.DASHSCOPE_API_KEY }, body: JSON.stringify({ model: 'qwen-plus', messages }) });

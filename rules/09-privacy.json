@@ -1,0 +1,18 @@
+{
+  "id": "LLM-PRIVACY-DISCLAIMER",
+  "title": "有模型 API 调用，但全项目没有隐私政策/隐私声明文档",
+  "severity": "medium",
+  "source": "《个人信息保护法》第 17 条 —— 处理个人信息前应向个人告知处理者名称、处理目的、方式与信息种类",
+  "advice": "补隐私政策/声明文档，逐个披露接入的大模型服务商（对齐盘点清单里的每个服务商）、传输的数据类型（对话/文件/语音）与留存期限。",
+  "check": {
+    "type": "files-lack",
+    "pattern": "隐私政策|隐私声明|privacy policy",
+    "flags": "gi",
+    "paths": [
+      "**/*.md",
+      "**/*.txt",
+      "**/*.html"
+    ],
+    "when": "(?:api\\.deepseek\\.com|api\\.openai\\.com|api\\.anthropic\\.com|dashscope\\.aliyuncs\\.com|api\\.moonshot\\.cn|open\\.bigmodel\\.cn|api\\.minimax)"
+  }
+}

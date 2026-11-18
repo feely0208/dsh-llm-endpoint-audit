@@ -1,0 +1,4 @@
+# @deepwhale-cn/dsh-llm-endpoint-audit 的组合层
+- insert:
+    - id: llm-endpoint-audit
+      name: '@deepwhale-cn/dsh-llm-endpoint-audit'

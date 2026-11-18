@@ -1,0 +1,25 @@
+{
+  "id": "LLM-CROSSBORDER",
+  "title": "调用境外大模型 API（OpenAI/Anthropic/Gemini）——对话内容属数据出境场景",
+  "severity": "high",
+  "source": "《个人信息保护法》第 38 条 —— 向境外提供个人信息须通过安全评估、标准合同备案或保护认证路径之一；《数据出境安全评估办法》（网信办 2022）",
+  "advice": "境外大模型端点（OpenAI/Anthropic/Gemini）传输对话内容即构成数据出境场景：①确认走标准合同备案或安全评估路径；②核对隐私政策是否披露境外接收方；③或改用境内已备案模型规避。severity=high 不是因为违法，而是因为这是最容易漏掉的合规硬要求。",
+  "check": {
+    "type": "file-pattern",
+    "pattern": "api\\.openai\\.com|api\\.anthropic\\.com|generativelanguage\\.googleapis\\.com",
+    "flags": "gi",
+    "exts": [
+      ".js",
+      ".mjs",
+      ".ts",
+      ".py",
+      ".json",
+      ".yaml",
+      ".yml",
+      ".md",
+      ".txt",
+      ".env"
+    ],
+    "max": 10
+  }
+}
